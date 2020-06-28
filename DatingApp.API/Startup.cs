@@ -59,7 +59,7 @@ namespace DatingApp.API
             {
                 app.UseDeveloperExceptionPage();
             } else
-            {
+                        {
                 app.UseExceptionHandler(builder => {
                     builder.Run(async context => {
                         context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
