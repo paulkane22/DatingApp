@@ -51,11 +51,12 @@ namespace DatingApp.API.Controllers
         {
             //throw new Exception("Computer says Error... PAUL KANE");
 
-
             var userFromRepo = await _repo.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
 
-            if (userFromRepo == null)
-                return Unauthorized();
+            if (userFromRepo == null) {
+                  return Unauthorized();
+            }
+               
 
             var claims = new[]
             {
