@@ -10,7 +10,7 @@ using System.Security.Claims;
 namespace DatingApp.API.Controllers
 {
 
-    //[Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
@@ -24,6 +24,7 @@ namespace DatingApp.API.Controllers
 
         }
 
+        
         [HttpGet]
         public async Task<IActionResult> GetUsers()
         {
